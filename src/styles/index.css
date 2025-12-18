@@ -9,3 +9,12 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.encendida{
+color: #FFFFFF;
+background: #333333;
+box-shadow: 0 -1px 10px #FFF, 0 -2px 50px #ff0, 0 -10px 20px #ff8000, 0 -18px 60px #F00;
+color: #FFFFFF;
+background: #333333;
+}
+

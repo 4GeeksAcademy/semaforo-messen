@@ -1,26 +1,30 @@
-import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, { useState } from "react";
+import "../../styles/index.css";
 
 //create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-            
 
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+	const [luzActiva, setLuzActiva] = useState("");
+
+	return (
+		<div className="container bg-dark align-items-center d-flex flex-column rounded-4 p-4 mx-auto mt-5"
+		style={{ width: "300px", height: "600px", border: "solid, 5px, grey" }}>
+            <div className={`bg-success rounded-circle mb-3 ${luzActiva === "green" ? "encendida" : ""}`}  
+			style={{ width: "200px", height: "200px"}}
+			onClick={() => {setLuzActiva("green")}}>
+			</div>
+			<div className={`bg-warning rounded-circle mb-3 ${luzActiva === "ambar" ? "encendida" : ""}`}  
+			style={{ width: "200px", height: "200px"}}
+			onClick={() => {setLuzActiva("ambar")}}>
+					
+			</div>
+			<div className={`bg-danger rounded-circle mb-3 ${luzActiva === "red" ? "encendida" : ""}`}  
+			style={{ width: "200px", height: "200px"}}
+			onClick={() => {setLuzActiva("red")}}>
+					
+			</div>
+		
+			
 		</div>
 	);
 };
